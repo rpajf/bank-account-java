@@ -4,23 +4,27 @@ import java.text.DecimalFormat;
 
 public class Bank {
 
-/*
-    public Bank(int accountNumber, double accountBalance, String customerName, String email, String phoneNumber) {
-        AccountNumber = accountNumber;
-        AccountBalance = accountBalance;
-        CustomerName = customerName;
-        Email = email;
-        PhoneNumber = phoneNumber;
-    }
-*/
 
+    public Bank(String customerName, int accountNumber,double accountBalance,  String email ,String phoneNumber) {
+        System.out.println("constructor with params");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        // maybe this is the best approach
+    }
     public Bank() {
-//        int accountNumber, double accountBalance, String customerName, String email, String phoneNumber
-//        this.accountNumber = accountNumber;
-//        this.accountBalance = accountBalance;
-//        CustomerName = customerName;
-//        Email = email;
-//        PhoneNumber = phoneNumber;
+        // if an object is created with the Bank class, and it has not params
+        // set these default valuess
+        this("rafael2", 12345,  1500, "asdad@c","91239123");
+        System.out.println("Empty constructor called");
+    }
+    // constructor with some parms
+
+
+    public Bank( String customerName,int accountNumber, double accountBalance) {
+        this(customerName, accountNumber, accountBalance, "asdasd@asd.com", "123123");
     }
 
     private static final DecimalFormat df = new DecimalFormat("0.00");
@@ -75,7 +79,7 @@ public class Bank {
     }
     public void checkMoney(){
 
-        System.out.println("Account balance " + df.format(getAccountBalance()));
+        System.out.println(getCustomerName()+ "'s " + "account balance " + df.format(getAccountBalance()));
     }
     public void depositMoney(double value){
         this.accountBalance += value;
@@ -90,5 +94,8 @@ public class Bank {
         System.out.println("new balance after withdraw " + df.format(value) + " amount " + df.format(getAccountBalance()));
 
 
+    }
+    public void accountInfo(){
+        System.out.println(getCustomerName() + "Account number: " + getAccountNumber() + "\n"  );
     }
 }
