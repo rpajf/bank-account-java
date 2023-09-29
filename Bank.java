@@ -14,15 +14,24 @@ public class Bank {
     }
 */
 
+    public Bank() {
+//        int accountNumber, double accountBalance, String customerName, String email, String phoneNumber
+//        this.accountNumber = accountNumber;
+//        this.accountBalance = accountBalance;
+//        CustomerName = customerName;
+//        Email = email;
+//        PhoneNumber = phoneNumber;
+    }
+
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
     private int accountNumber;
     private double accountBalance;
-    private String CustomerName;
+    private String customerName;
 
-   private String Email;
+   private String email;
 
-    private String PhoneNumber;
+    private String phoneNumber;
 
     public int getAccountNumber() {
         return accountNumber;
@@ -33,15 +42,15 @@ public class Bank {
     }
 
     public String getCustomerName() {
-        return CustomerName;
+        return customerName;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
 
@@ -54,15 +63,15 @@ public class Bank {
     }
 
     public void setCustomerName(String customerName) {
-        CustomerName = customerName;
+        this.customerName = customerName;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
     public void checkMoney(){
 
@@ -78,7 +87,7 @@ public class Bank {
             return;
         }
         this.accountBalance -= value;
-        System.out.println("new balance after withdraw " + df.format(getAccountBalance()));
+        System.out.println("new balance after withdraw " + df.format(value) + " amount " + df.format(getAccountBalance()));
 
 
     }
