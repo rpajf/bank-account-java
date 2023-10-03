@@ -3,7 +3,6 @@ package ClassesFundamentals.Inheritance;
 public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal("generic", "Humongous", 400);
-//        Animal animal = new Animal();
         doAnimalStuff(animal, "slow");
 
         Dog dog = new Dog();

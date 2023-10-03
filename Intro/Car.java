@@ -1,4 +1,4 @@
-package ClassesFundamentals;
+package ClassesFundamentals.Intro;
 
 public class Car {
     private String make = "nissan";

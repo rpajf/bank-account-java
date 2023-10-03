@@ -1,4 +1,4 @@
-package ClassesFundamentals;
+package ClassesFundamentals.Intro;
 
 import java.text.DecimalFormat;
 
