@@ -23,7 +23,11 @@ public class Main {
             System.out.print("enter movie title :");
             String title = s.nextLine();
             Movie movie = Movie.getMovie(type, title);
+            // watchMovie is called using a Movie reference variable at run time
+            // the method getMovie is called on an instance of the subClass
+            // and the method on the subClass that is executed
             movie.watchMovie();
+            // this is the polymorphism behavior
         }
         // input stream
 
