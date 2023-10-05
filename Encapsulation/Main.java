@@ -1,2 +1,4 @@
-package ClassesFundamentals.Encapsulation;public class Main {
+package ClassesFundamentals.Encapsulation;
+
+public class Main {
 }
